@@ -1,0 +1,43 @@
+(REMEMBER: YOU WILL HAVE 2 package.json - 1 for your server and 1 for react
+
+BACKEND
+1. (Don't worry about react app yet..)
+2. go to your project folder -> npm init
+3. npm init will have you fill out a form -> once you get to entry point: server.js (you could probs just name it whatever you're calling your server)
+4. npm i express concurrently nodemon
+5. go into server's package.json folder - change test to "start": "node server.js"
+6. underneath "start" - "server":"nodemon server.js"
+7. create server.js file
+8. REMEMBER - all of this will be outside of your React App
+9. within your server.js page
+
+const express = require("express");
+const app = express();
+const port = process.env.port || 5000;
+
+app.get("/", (req, res) => {
+  res.json({ msg: "backend running" });
+});
+
+app.listen(port, () => console.log(`server running on port: ${port}`)); 
+
+-> basic starter express
+10. open a new terminal -> + button within server.js terminal -> your server.js terminal will still be running
+-> now you'll create your react app 
+
+FRONTEND
+
+1. you may or may not need to run this in the future - npm i -g create-react-app - no name
+2. Brad's tutorial had us do "create-react-app client" - that didn't work - do "npx create-react-app client" - you can name client whatever you want
+3. once react is installed - go into react's package.json 
+4. under "scripts":{} -> "proxy":"http://localhost:5000" -> make sure the port matches the port within server.js
+5. that's all you're doing in react's package.json for now
+6. run react - cd client (if you don't go into the right folder to run react it'll return an error message that says you're trying to run something on the same port) - npm start
+
+FINAL STEP - back to BACKEND package.json
+1. within "scripts":{} - under "server":{} - "client": "cd client && npm start" or "client": "npm start --prefix client"
+2. underneath "client":{} - "dev": "concurrently \"npm run server\" \"npm run client\"" - mind how your files are named
+3. within your terminal - navigate out of your react/client folder - npm run dev
+
+-> basically - most of what's going on is within your server's package.json folder..
+-> now if you switch something in either your react app or server.js it'll update both

@@ -1,0 +1,23 @@
+.header {
+  background-color: black;
+  grid-column: 1/-1;
+  padding: 20px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons {
+  border: 1px solid none;
+  align-items: center;
+}
+
+.ind_icon {
+  border: 1px solid none;
+  margin: 5px;
+}
+
+#react {
+  margin-right: -5px;
+}

@@ -1,0 +1,31 @@
+#wrapper {
+  border: 1px solid none;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 7.5px;
+  grid-column: 2/-1;
+  height: 575px;
+  overflow-y: scroll;
+}
+
+#keys_count {
+  border-bottom: 1px solid none;
+  margin: 5px;
+}
+
+.keys_container {
+  border: 1px solid none;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 150px;
+}
+
+.ind_keys {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

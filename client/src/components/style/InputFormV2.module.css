@@ -1,0 +1,24 @@
+#wrapper {
+  grid-column: 1/-1;
+}
+
+.ind {
+  margin: 2.5px;
+  vertical-align: middle;
+}
+
+#add {
+  margin: 5px;
+}
+
+#submit {
+  margin: 5px;
+}
+
+#content {
+  width: 65%;
+}
+
+#remove {
+  margin: 5px;
+}

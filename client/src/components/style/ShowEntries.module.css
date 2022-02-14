@@ -1,0 +1,5 @@
+.wrapper {
+  grid-column: 1/2;
+  overflow-y: scroll;
+  height: 575px;
+}
