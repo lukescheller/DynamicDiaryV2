@@ -31,11 +31,7 @@ let moy = month[today.getMonth()];
 let dan = today.getDate();
 let yan = today.getFullYear();
 let formattedDate = `${dow} ${moy} ${dan} ${yan}`;
-
-//11:19
-let hour = today.getHours();
-let minutes = today.getMinutes();
-let formattedTime = `${hour}:${minutes}`;
+console.log(formattedDate);
 
 const EntrySchema = new Schema(
   {
@@ -46,10 +42,6 @@ const EntrySchema = new Schema(
     date: {
       type: String,
       default: formattedDate,
-    },
-    time: {
-      type: String,
-      default: formattedTime,
     },
   },
   { minimize: false }

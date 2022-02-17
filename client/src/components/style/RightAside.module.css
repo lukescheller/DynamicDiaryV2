@@ -1,11 +1,12 @@
 #wrapper {
   border: 1px solid none;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
   margin-bottom: 7.5px;
   grid-column: 2/-1;
-  height: 575px;
+  height: 565px;
+
   overflow-y: scroll;
+  border-radius: 15px;
 }
 
 #keys_count {

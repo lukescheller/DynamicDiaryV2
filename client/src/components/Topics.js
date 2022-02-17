@@ -8,25 +8,27 @@ const Topics = () => {
   let KS = keySort(entries.entries);
   return (
     <div
+      className="bg-primary text-white"
       style={{
         display: "flex",
         gridColumn: "1/-1",
-        alignItems: "flex-start",
+        // alignItems: "flex-start",
       }}
     >
-      <div className="p-3 mb-2 bg-warning text-dark" style={{}}>
-        <h3 style={{}}>Topics:</h3>
+      <div className="p-3 bg-warning text-dark" style={{}}>
+        <h3 style={{}}>Topics: ({KS[0].sort().length})</h3>
       </div>
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
+          paddingTop: "7.5px",
         }}
       >
         {entries.loading === "loading..."
           ? "Loading..."
           : KS[0].map((k) => {
-              return <p style={{ margin: "22.5px" }}>{k}</p>;
+              return <p style={{ margin: "15px" }}>{k}</p>;
             })}
       </div>
     </div>

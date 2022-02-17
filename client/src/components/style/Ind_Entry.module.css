@@ -1,5 +1,7 @@
 #border {
   padding: 10px;
-  margin-left: 5px;
+  margin: 5px;
   text-align: left;
+  border: 1px solid transparent;
+  border-radius: 15px;
 }

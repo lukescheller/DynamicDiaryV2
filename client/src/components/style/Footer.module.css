@@ -1,0 +1,20 @@
+#wrapper {
+  border: 1px solid transparent;
+  grid-column: 1/-1;
+  padding: 20px;
+}
+
+#socialM {
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_icon {
+  margin: 5px;
+}
+
+.footer_icon a {
+  text-decoration: none;
+}

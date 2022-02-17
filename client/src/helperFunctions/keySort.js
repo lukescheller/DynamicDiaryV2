@@ -92,7 +92,7 @@ const keySort = (array) => {
     }
     final_obj[keysSorted[x]] = final_obj_array;
   }
-  console.log(final_obj);
+  // console.log(final_obj);
   return [keysSorted, final_obj];
 };
 

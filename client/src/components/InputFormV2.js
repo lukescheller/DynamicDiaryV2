@@ -47,7 +47,7 @@ const InputFormV2 = () => {
 
   // you'll have 2 returns - 1 for the component - 1 for the map function
   return (
-    <div id={styles.wrapper} className="p-3 mb-2 bg-light text-dark">
+    <div id={styles.wrapper} className="p-3 bg-light text-dark">
       <div>
         <button
           onClick={addInputFieldHandler}

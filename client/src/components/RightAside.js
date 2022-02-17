@@ -10,57 +10,59 @@ const RightAside = () => {
   return (
     <div className="p-3 mb-2 bg-light text-dark" id={styles.wrapper}>
       <div style={{}}>
-        {Object.keys(KS[1]).map((key) => {
-          return (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                margin: "5px",
-                borderBottom: "1px solid black",
-              }}
-            >
+        {Object.keys(KS[1])
+          .sort()
+          .map((key) => {
+            return (
               <div
                 style={{
                   display: "flex",
+                  alignItems: "center",
+                  margin: "5px",
+                  borderBottom: "1px solid black",
                 }}
               >
-                <h3
+                <div
                   style={{
-                    margin: "5px",
-                    padding: "5px",
-                    textAlign: "left",
+                    display: "flex",
                   }}
                 >
-                  {key}:
-                </h3>
+                  <h3
+                    style={{
+                      margin: "5px",
+                      padding: "5px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {key}:
+                  </h3>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  {KS[1][key].map((arr) => {
+                    return (
+                      <div
+                        style={{
+                          margin: "5px",
+                          padding: "5px",
+                        }}
+                      >
+                        {arr === "yes" ? (
+                          <img src="https://img.icons8.com/fluency/48/000000/instagram-check-mark.png" />
+                        ) : (
+                          <img src="https://img.icons8.com/emoji/48/000000/cross-mark-button-emoji.png" />
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                }}
-              >
-                {KS[1][key].map((arr) => {
-                  return (
-                    <div
-                      style={{
-                        margin: "5px",
-                        padding: "5px",
-                      }}
-                    >
-                      {arr === "yes" ? (
-                        <img src="https://img.icons8.com/fluency/48/000000/instagram-check-mark.png" />
-                      ) : (
-                        <img src="https://img.icons8.com/emoji/48/000000/cross-mark-button-emoji.png" />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

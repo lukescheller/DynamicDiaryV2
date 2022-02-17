@@ -7,6 +7,7 @@ import ShowEntries from "./components/ShowEntries";
 import RightAside from "./components/RightAside";
 import Header from "./components/Header";
 import Topics from "./components/Topics";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
       <InputFormV2 />
       <ShowEntries />
       <RightAside />
+      <Footer />
     </div>
   );
 }
